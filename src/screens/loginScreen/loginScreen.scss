@@ -2,33 +2,45 @@
 
 .login {
    height: 100vh;
-   display: grid;
+   display: flex;
 
-   place-items: center;
+   .leftside {
+      flex: 1;
+      height: 100vh;
+      background: url("https://images.unsplash.com/photo-1575041051612-323e644ca1b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
 
-   &__container {
-      background-color: $black-secondary;
-      padding: 2rem;
-      margin: 0 1rem;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+   .rightside {
+      flex: 1;
+      height: 100vh;
+      background-color: black;
+
+      &__text-wrapper {
+         text-align: center;
+         display: grid;
+         place-items: center;
+         place-content: center;
+         height: 100vh;
+         color: white;
+      }
 
       button {
-         padding: 0.5rem;
-         border: none;
-         border-radius: 5px;
-         margin-bottom: 1rem;
-         &:focus {
-            outline: none;
+         padding: 10px;
+         width: 50%;
+         background-color: transparent;
+         color: white;
+         border: white 1px solid;
+         transition: 0.3s;
+         &:hover {
+            background-color: white;
+            color: black;
          }
       }
-   }
 
-   img {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
+      
    }
+  
 }
